@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        /* *{
+            margin: 0;
+            padding: 0;
+        } */
+        /* body{
+            overflow: hidden;
+        } */
+        .flot{
+            display: flex;
+        }
+        h1{
+            margin: 50px 100px;
+            font-family: sans-serif;
+            font-weight: 800;
+        }
+        .contner{
+            background-color: rgb(155, 153, 153);
+            width: 470px;
+            height: 340px;
+            margin: 10px 100px;
+            /* text-align: center; */
+            padding: 60px;
+            border-radius: 10px;
+            font-family: sans-serif;
+            /* font-size:10px; */
+            font-weight: 600;
+            
+        }
+        .contner:hover{
+            box-shadow: 5px 3px 10px rgb(65, 65, 65);
+        }
+        input{
+            margin: 10px;
+            padding: 6px;
+            padding-bottom: -10px;
+            /* margin-left: 25px; */
+        }
+        input{
+            margin: 10px;
+            padding: 6px;
+            padding-bottom: -10px;
+            border-radius: 5px;
+        }
+        button{
+            margin: 3px;
+            padding: 7px 20px;
+            text-align: center;
+            font-family: sans-serif;
+            font-weight: 600;
+            border-radius: 10px;
+        }
+        .button{
+            margin-left: 100px;
+            margin-bottom: -20px;
+        }
+        .info{
+            margin: 40px;
+        }
+        ol {
+counter-reset: li; /* Initiate a counter */
+list-style: none; /* Remove default numbering */
+*list-style: decimal; /* Keep using default numbering for IE6/7 */
+font: 15px 'trebuchet MS', 'lucida sans';
+padding: 0;
+margin-bottom: 4em;
+text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+
+ol ol {
+margin: 0 0 0 2em; /* Add some left margin for inner lists */
+}
+
+.rounded-list a{
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em 2em;
+    *padding: .4em;
+    margin: .5em 0;
+    background: #ddd;
+    color: #444;
+    text-decoration: none;
+    border-radius: .3em;
+    transition: all .3s ease-out;
+  }
+
+  .rounded-list a:hover{
+    background: #eee;
+  }
+
+  .rounded-list a:hover:before{
+    transform: rotate(360deg);
+  }
+
+  .rounded-list a:before{
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -1.3em;
+    top: 50%;
+    margin-top: -1.3em;
+    background: #87ceeb;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    border: .3em solid #fff;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 2em;
+    transition: all .3s ease-out;
+  }
+  .home{
+    margin-left: 100px;
+  }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand logo" href="#">TEMPERATURE CONVERSION</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active home">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="Contact_Us.html">Contact Us <span class="sr-only">(current)</span></a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="About_Us.html">About Us</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+
+
+
+      <div class="flot">
+        <div>
+    <h1>Fahrenheit to Kelvin | °F to °K</h1>
+    <form id= "Form">
+    <div class="contner">
+        <label for="">Fahrenheit: </label>
+        <input type="number" id="Celsius"value=""> &#8451; 
+        <br>
+        <div class="button">
+        <!-- <button id="Convert"> &#x21ba; Convert</button> -->
+            <button id="Reset" onclick= "clearInput()"> &#10006; Reset</button><button id="Swap"><a href="index7.html" style="color: black; text-decoration: none;" > &#x21c5; Swap </a></button>
+    </div>
+        <br>
+        <label for="">Kelvin: </label>
+        <input type="number" id="Kelvin"value=""> <a> &#8490; </a> <br>
+        <label for="">Calculation: </label>
+        <!-- <textarea name="Calculation" id="" cols="24" rows="2"></textarea> -->
+        <input type="text" id="Calculation"value="">
+
+    </div>
+</form>
+</div>
+    <div class="info">
+        <ol class="rounded-list">
+            <li><a href="index1.html">Celsius to Fahrenheit</a></li>
+            <li><a href="index2.html">Celsius to Kelvin</a></li>
+            <li><a href="index3.html">Celsius to Rankine</a></li>
+            <li><a href="index4.html">Fahrenheit to Celsius</a></li>
+            <li><a href="index5.html">Fahrenheit to Kelvin</a></li>
+            <li><a href="index6.html">Fahrenheit to Rankine</a></li>
+            <li><a href="index7.html">Kelvin to Fahrenheit</a></li>
+            <li><a href="index8.html">Kelvin to Celsius</a></li>
+            <li><a href="index9.html">Kelvin to Rankine</a></li>
+            <li><a href="index10.html">Rankine to Fahrenheit</a></li>
+            <li><a href="index11.html">Rankine to Celsius</a></li>
+            <li><a href="index12.html">Rankine to Kelvin</a></li>
+        </ol>
+    </div>
+
+</div>
+<script>
+    let Celsius = document.getElementById("Celsius");
+    let Kelvin = document.getElementById("Kelvin");
+    let Calculation = document.getElementById("Calculation");
+    let Convert = document.getElementById("Convert");
+    let Reset = document.getElementById("Reset");
+    let Swap = document.getElementById("Swap");
+   
+
+ 
+    
+    Celsius.addEventListener('input',function(){
+        let Kelvin_result = (Celsius.value - 32 )*5/9 + 273.15;
+        // (0°F − 32) × 5/9 + 273.15 = 255.372K
+        Calculation.value = "("+ Celsius.value + "°F − 32) × 5/9 + 273.15" + "=" + Kelvin_result+ "°K"
+        
+
+        if(!Number.isInteger(Kelvin_result)){
+            Kelvin_result = Kelvin_result.toFixed(2);
+        }
+        Kelvin.value = Kelvin_result;
+    });
+
+    Kelvin.addEventListener('input',function(){
+        let Kelvin_value = this.value;
+        let Celsius_result = (Kelvin_value - 273.15 )*9/5 +32;
+        // (0K − 273.15) × 9/5 + 32 = -459.7°F
+        Calculation.value = "("+ Kelvin_value + "°K − 273.15) × 9/5 + 32 " + "=" + Celsius_result + "°F"
+
+        if(!Number.isInteger(Celsius_result)){
+            Celsius_result = Celsius_result.toFixed(2);
+        }
+
+        Celsius.value = Celsius_result;
+    });
+
+    
+    function clearInput() {
+    document.getElementById("Form").reset();
+}
+    
+</script>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
